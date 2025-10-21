@@ -2,10 +2,22 @@ package com.tecdes.aluguel.view;
 
 import java.awt.Font;
 import java.util.List;
-import javax.swing.*;
+
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
 
 import com.tecdes.aluguel.controller.AluguelController;
-import com.tecdes.aluguel.model.*;
+import com.tecdes.aluguel.model.Aluguel;
+import com.tecdes.aluguel.model.AluguelApartamento;
+import com.tecdes.aluguel.model.AluguelCasa;
+import com.tecdes.aluguel.model.AluguelComercial;
+import com.tecdes.aluguel.model.AluguelTemporada;
 
 public class AluguelForm extends JFrame {
 
@@ -19,7 +31,7 @@ public class AluguelForm extends JFrame {
 
     public AluguelForm(AluguelController controller) {
         this.controller = controller;
-        setTitle("Gestor de Aluguéis - SOLID + Arquivo");
+        setTitle("Gestor de Aluguéis");
         setSize(500, 560);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

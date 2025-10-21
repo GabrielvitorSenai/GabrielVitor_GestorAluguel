@@ -15,9 +15,9 @@ public class AluguelComercial implements Aluguel {
     @Override
     public String calcular() {
         double totalBase = valorMensal * meses;
-        double total = totalBase * 1.03; // ISS 3%
+        double total = totalBase;
         return "[COMERCIAL] " + formatar(total) + " (" + meses + " meses, R$ " 
-                + formatar(valorMensal) + "/mês + ISS 3%)";
+                + formatar(valorMensal) + "/mês)";
     }
 
     private String formatar(double v) {

@@ -14,7 +14,7 @@ public class AluguelCasa implements Aluguel {
 
     @Override
     public String calcular() {
-        double total = (valorMensal * meses) * 1.02; // taxa manutenção 2%
+        double total = (valorMensal * meses);
         return "[CASA] " + formatar(total) + " (" + meses + " meses, R$ " + formatar(valorMensal) + "/mês)";
     }
 

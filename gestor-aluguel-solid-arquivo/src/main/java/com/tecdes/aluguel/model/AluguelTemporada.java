@@ -15,9 +15,9 @@ public class AluguelTemporada implements Aluguel {
     @Override
     public String calcular() {
         double valorDia = valorMensal / 30.0;
-        double total = valorDia * dias + 150.0; // taxa limpeza R$150
+        double total = valorDia * dias + 50.0; // taxa limpeza 50 reais
         return "[TEMPORADA] " + formatar(total) + " (" + dias + " dias, " 
-                + formatar(valorDia) + "/dia + limpeza R$ 150)";
+                + formatar(valorDia) + "/dia + limpeza R$ 50)";
     }
 
     private String formatar(double v) {
