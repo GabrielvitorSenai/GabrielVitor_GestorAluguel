@@ -1,0 +1,24 @@
+package com.tecdes.aluguel.model;
+
+import java.text.NumberFormat;
+import java.util.Locale;
+
+public class AluguelCasa implements Aluguel {
+    private final double valorMensal;
+    private final int meses;
+
+    public AluguelCasa(double valorMensal, int meses) {
+        this.valorMensal = valorMensal;
+        this.meses = meses;
+    }
+
+    @Override
+    public String calcular() {
+        double total = (valorMensal * meses) * 1.02; // taxa manutenção 2%
+        return "[CASA] " + formatar(total) + " (" + meses + " meses, R$ " + formatar(valorMensal) + "/mês)";
+    }
+
+    private String formatar(double v) {
+        return NumberFormat.getCurrencyInstance(new Locale("pt", "BR")).format(v);
+    }
+}
